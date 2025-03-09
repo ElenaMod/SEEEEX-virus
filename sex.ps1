@@ -8,7 +8,6 @@ If (-not $IsAdmin) {
     Start-Process powershell.exe -ArgumentList $arguments -Verb RunAs -WindowStyle Hidden
     Exit
 }
-
 #---------------------------
 # 1. Download the Video File
 #---------------------------
